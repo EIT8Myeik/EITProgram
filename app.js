@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use("/api/v1/members", members);
 
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 const load = async () => {
   try {
